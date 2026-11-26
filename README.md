@@ -1,4 +1,4 @@
-﻿# MSFilesAStd
+# MSFilesAStd
 
 Scripts Python independentes para geracao de documentos (Word, Excel, PowerPoint e PDF).
 Funciona com qualquer LLM ou de forma standalone.
@@ -93,4 +93,4 @@ MSFilesAStd/
 
 ---
 
-Projeto adaptado da comunidade INEMA TDS - Marca Arckhe
+Projeto  - ARCKHÉe

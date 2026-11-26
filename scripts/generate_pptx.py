@@ -16,14 +16,14 @@ from pptx.chart.data import CategoryChartData
 import sys
 import os
 
-# === CORES PADRÃO ===
+# === CORES PADRêO ===
 AZUL_ESCURO = RGBColor(31, 78, 121)
 AZUL_CLARO = RGBColor(68, 114, 196)
 BRANCO = RGBColor(255, 255, 255)
 CINZA = RGBColor(89, 89, 89)
 
 def criar_apresentacao(caminho_saida="out/apresentacao.pptx"):
-    """Cria uma apresentação PowerPoint de exemplo"""
+    """Cria uma apresentaçêo PowerPoint de exemplo"""
 
     prs = Presentation()
     prs.slide_width = Inches(13.333)  # 16:9
@@ -45,7 +45,7 @@ def criar_apresentacao(caminho_saida="out/apresentacao.pptx"):
     titulo = slide1.shapes.add_textbox(Inches(0.5), Inches(2.5), Inches(12.3), Inches(1.5))
     tf = titulo.text_frame
     p = tf.paragraphs[0]
-    p.text = "Título da Apresentação"
+    p.text = "Título da Apresentaçêo"
     p.font.size = Pt(54)
     p.font.bold = True
     p.font.color.rgb = BRANCO
@@ -85,11 +85,11 @@ def criar_apresentacao(caminho_saida="out/apresentacao.pptx"):
     tf.word_wrap = True
 
     itens = [
-        "Introdução e contexto",
+        "Introduçêo e contexto",
         "Análise dos dados",
         "Resultados obtidos",
         "Próximos passos",
-        "Conclusão"
+        "Conclusêo"
     ]
 
     for i, item in enumerate(itens):
@@ -135,7 +135,7 @@ def criar_apresentacao(caminho_saida="out/apresentacao.pptx"):
     p.font.size = Pt(28)
     p.font.bold = True
     p.font.color.rgb = AZUL_CLARO
-    for texto in ["Processo automatizado", "Redução de custos", "Alta precisão"]:
+    for texto in ["Processo automatizado", "Reduçêo de custos", "Alta precisêo"]:
         p = tf.add_paragraph()
         p.text = f"• {texto}"
         p.font.size = Pt(20)
@@ -165,7 +165,7 @@ def criar_apresentacao(caminho_saida="out/apresentacao.pptx"):
 
     chart.has_legend = True
 
-    # === SLIDE 5: CONCLUSÃO ===
+    # === SLIDE 5: CONCLUSêO ===
     slide5 = prs.slides.add_slide(prs.slide_layouts[6])
 
     # Fundo
@@ -196,14 +196,14 @@ def criar_apresentacao(caminho_saida="out/apresentacao.pptx"):
     os.makedirs(os.path.dirname(caminho_saida) if os.path.dirname(caminho_saida) else '.', exist_ok=True)
 
     prs.save(caminho_saida)
-    print(f"Apresentação criada: {caminho_saida}")
+    print(f"Apresentaçêo criada: {caminho_saida}")
     return caminho_saida
 
 
 # === FUNÇÕES AUXILIARES PARA USO COM LLMs ===
 
 def nova_apresentacao(widescreen=True):
-    """Cria nova apresentação"""
+    """Cria nova apresentaçêo"""
     prs = Presentation()
     if widescreen:
         prs.slide_width = Inches(13.333)
@@ -302,10 +302,10 @@ def adicionar_slide_grafico(prs, titulo, categorias, series_dados):
     return slide
 
 def salvar_apresentacao(prs, caminho):
-    """Salva a apresentação"""
+    """Salva a apresentaçêo"""
     os.makedirs(os.path.dirname(caminho) if os.path.dirname(caminho) else '.', exist_ok=True)
     prs.save(caminho)
-    print(f"Apresentação salva: {caminho}")
+    print(f"Apresentaçêo salva: {caminho}")
 
 
 if __name__ == "__main__":

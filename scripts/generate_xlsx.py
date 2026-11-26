@@ -15,7 +15,7 @@ from openpyxl.formatting.rule import ColorScaleRule, FormulaRule
 import sys
 import os
 
-# === ESTILOS PADRÃO ===
+# === ESTILOS PADRêO ===
 HEADER_FONT = Font(bold=True, color="FFFFFF", size=11)
 HEADER_FILL = PatternFill("solid", fgColor="1F4E79")
 BORDER = Border(
@@ -136,7 +136,7 @@ def criar_planilha(caminho_saida="out/planilha.xlsx"):
     chart2.set_categories(cats)
     ws_graf.add_chart(chart2, "E18")
 
-    # Criar diretório se não existir
+    # Criar diretório se nêo existir
     os.makedirs(os.path.dirname(caminho_saida) if os.path.dirname(caminho_saida) else '.', exist_ok=True)
 
     wb.save(caminho_saida)

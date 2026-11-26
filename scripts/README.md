@@ -1,9 +1,9 @@
-# Scripts de Geração de Documentos
+# Scripts de Geraçêo de Documentos
 
 Scripts Python standalone para gerar documentos Word, Excel, PowerPoint e PDF.
 Compatíveis com qualquer LLM (Codex, GPT-4, Claude, etc).
 
-## Instalação
+## Instalaçêo
 
 ```bash
 pip install python-docx openpyxl python-pptx reportlab
@@ -51,7 +51,7 @@ from generate_docx import *
 criar_documento_personalizado(
     titulo="Meu Relatório",
     secoes=[
-        {"titulo": "Introdução", "conteudo": "Texto da introdução..."},
+        {"titulo": "Introduçêo", "conteudo": "Texto da introduçêo..."},
         {"titulo": "Análise", "conteudo": "Texto da análise..."},
     ],
     caminho_saida="out/relatorio.docx"
@@ -98,7 +98,7 @@ salvar_workbook(wb, "out/planilha.xlsx")
 from generate_pptx import *
 from pptx.dml.color import RGBColor
 
-# Criar apresentação
+# Criar apresentaçêo
 prs = nova_apresentacao()
 
 # Slide de título
@@ -170,7 +170,7 @@ Usando o script generate_xlsx.py, crie uma planilha com:
 ```
 Importe as funções do generate_docx.py e crie um documento Word com:
 1. Título "Relatório Mensal"
-2. Seção de introdução
+2. Seçêo de introduçêo
 3. Tabela com 3 colunas de dados
 4. Lista de próximos passos
 Salve em out/relatorio_mensal.docx

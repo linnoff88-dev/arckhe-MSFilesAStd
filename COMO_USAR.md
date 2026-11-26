@@ -29,12 +29,12 @@ python scripts/exemplo_com_llm.py "seu assunto" docx
 ```bash
 python scripts/exemplo_com_llm.py "relatório trimestral" docx
 python scripts/exemplo_com_llm.py "proposta comercial" docx
-python scripts/exemplo_com_llm.py "ata de reunião" docx
+python scripts/exemplo_com_llm.py "ata de reuniêo" docx
 ```
 
 ---
 
-## Gerar Apresentação PowerPoint
+## Gerar Apresentaçêo PowerPoint
 
 ```bash
 python scripts/exemplo_com_llm.py "seu assunto" pptx
@@ -52,7 +52,7 @@ python scripts/exemplo_com_llm.py "treinamento equipe" pptx
 ## Gerar Imagem
 
 ```bash
-python scripts/gerar_imagem.py "descrição da imagem"
+python scripts/gerar_imagem.py "descriçêo da imagem"
 ```
 
 **Exemplos:**
@@ -87,7 +87,7 @@ Crie um arquivo `.txt` com as instruções:
 ```
 Criar relatório de vendas contendo:
 - Resumo executivo
-- Vendas por região
+- Vendas por regiêo
 - Top 10 produtos
 - Comparativo com ano anterior
 - Recomendações
@@ -112,7 +112,7 @@ python scripts/exemplo_com_llm.py briefing.txt docx
 
 ## Onde Ficam os Arquivos
 
-Todos os arquivos são salvos na pasta `out/`
+Todos os arquivos sêo salvos na pasta `out/`
 
 ---
 
@@ -129,7 +129,7 @@ python scripts/exemplo_com_llm.py "assunto" docx
 python scripts/exemplo_com_llm.py "assunto" pptx
 
 # Imagem
-python scripts/gerar_imagem.py "descrição"
+python scripts/gerar_imagem.py "descriçêo"
 
 # Com arquivo de referência
 python scripts/exemplo_com_llm.py arquivo.txt xlsx

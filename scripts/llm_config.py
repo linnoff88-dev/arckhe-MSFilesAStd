@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Configuração de APIs para LLMs
+Configuraçêo de APIs para LLMs
 
 Suporta: OpenAI (GPT-4, Codex), Anthropic (Claude), Google (Gemini), etc.
 
@@ -19,7 +19,7 @@ try:
     env_path = Path(__file__).parent.parent / '.env'
     load_dotenv(env_path)
 except ImportError:
-    pass  # python-dotenv não instalado, usar variáveis de ambiente diretamente
+    pass  # python-dotenv nêo instalado, usar variáveis de ambiente diretamente
 
 
 # =============================================
@@ -322,13 +322,13 @@ def gerar_imagem_openai(prompt, output_path="out/imagem.png", size="1024x1024"):
 
 
 # =============================================
-# VERIFICAÇÃO
+# VERIFICAÇêO
 # =============================================
 
 def verificar_configuracao():
-    """Verifica quais APIs estão configuradas"""
+    """Verifica quais APIs estêo configuradas"""
     print("=" * 50)
-    print("VERIFICAÇÃO DE CONFIGURAÇÃO DE APIs")
+    print("VERIFICAÇêO DE CONFIGURAÇêO DE APIs")
     print("=" * 50)
 
     apis = [

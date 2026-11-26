@@ -22,7 +22,7 @@ from reportlab.graphics.charts.linecharts import HorizontalLineChart
 import sys
 import os
 
-# === CORES PADRÃO ===
+# === CORES PADRêO ===
 AZUL_ESCURO = HexColor('#1F4E79')
 AZUL_CLARO = HexColor('#4472C4')
 CINZA = HexColor('#595959')
@@ -95,7 +95,7 @@ def criar_grafico_barras(dados, categorias, titulo="Gráfico"):
 
     return drawing
 
-def criar_grafico_pizza(dados, labels, titulo="Distribuição"):
+def criar_grafico_pizza(dados, labels, titulo="Distribuiçêo"):
     """Cria gráfico de pizza"""
     drawing = Drawing(300, 200)
 
@@ -140,11 +140,11 @@ def criar_pdf(caminho_saida="out/documento.pdf"):
     elementos.append(Paragraph("Documento gerado automaticamente", styles['Rodape']))
     elementos.append(Spacer(1, 30))
 
-    # === INTRODUÇÃO ===
-    elementos.append(Paragraph("1. Introdução", styles['Subtitulo']))
+    # === INTRODUÇêO ===
+    elementos.append(Paragraph("1. Introduçêo", styles['Subtitulo']))
     elementos.append(Paragraph(
         "Este é um documento PDF de exemplo criado com a biblioteca ReportLab. "
-        "Ele demonstra as principais funcionalidades disponíveis para geração de "
+        "Ele demonstra as principais funcionalidades disponíveis para geraçêo de "
         "documentos profissionais com Python.",
         styles['TextoNormal']
     ))
@@ -154,7 +154,7 @@ def criar_pdf(caminho_saida="out/documento.pdf"):
     elementos.append(Paragraph("2. Características", styles['Subtitulo']))
 
     itens = [
-        "Formatação de texto (negrito, itálico, cores)",
+        "Formataçêo de texto (negrito, itálico, cores)",
         "Tabelas com estilos personalizados",
         "Gráficos de barras e pizza",
         "Quebras de página automáticas",
@@ -207,7 +207,7 @@ def criar_pdf(caminho_saida="out/documento.pdf"):
     elementos.append(Spacer(1, 30))
 
     # === GRÁFICO DE BARRAS ===
-    elementos.append(Paragraph("4. Visualização dos Dados", styles['Subtitulo']))
+    elementos.append(Paragraph("4. Visualizaçêo dos Dados", styles['Subtitulo']))
 
     grafico = criar_grafico_barras(
         [[15000, 18000, 22000, 19500], [8000, 9500, 11000, 10200]],
@@ -221,18 +221,18 @@ def criar_pdf(caminho_saida="out/documento.pdf"):
     pizza = criar_grafico_pizza(
         [35, 25, 20, 12, 8],
         ['Produto A', 'Produto B', 'Produto C', 'Produto D', 'Outros'],
-        'Distribuição de Vendas'
+        'Distribuiçêo de Vendas'
     )
     elementos.append(pizza)
     elementos.append(Spacer(1, 30))
 
-    # === CONCLUSÃO ===
+    # === CONCLUSêO ===
     elementos.append(PageBreak())
-    elementos.append(Paragraph("5. Conclusão", styles['Subtitulo']))
+    elementos.append(Paragraph("5. Conclusêo", styles['Subtitulo']))
     elementos.append(Paragraph(
-        "Este documento demonstra as principais capacidades de geração de PDF "
+        "Este documento demonstra as principais capacidades de geraçêo de PDF "
         "com Python. A biblioteca ReportLab oferece controle total sobre o layout "
-        "e formatação dos documentos, permitindo criar relatórios profissionais "
+        "e formataçêo dos documentos, permitindo criar relatórios profissionais "
         "de forma programática.",
         styles['TextoNormal']
     ))

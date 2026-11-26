@@ -1,13 +1,13 @@
-# Instalação e Configuração
+# Instalaçêo e Configuraçêo
 
-Guia para instalar e configurar os scripts de geração de documentos.
+Guia para instalar e configurar os scripts de geraçêo de documentos.
 
 ---
 
 ## Requisitos
 
 - Python 3.8 ou superior
-- Conexão com internet (para APIs)
+- Conexêo com internet (para APIs)
 
 ---
 
@@ -17,10 +17,10 @@ Guia para instalar e configurar os scripts de geração de documentos.
 
 1. Baixe em: https://www.python.org/downloads/
 2. Execute o instalador
-3. **IMPORTANTE:** Marque a opção "Add Python to PATH"
+3. **IMPORTANTE:** Marque a opçêo "Add Python to PATH"
 4. Clique em "Install Now"
 
-### Verificar instalação
+### Verificar instalaçêo
 
 Abra o terminal (CMD ou PowerShell) e digite:
 ```bash
@@ -41,7 +41,7 @@ pip install python-docx openpyxl python-pptx reportlab openai python-dotenv repl
 
 ### O que cada biblioteca faz:
 
-| Biblioteca | Função |
+| Biblioteca | Funçêo |
 |------------|--------|
 | `python-docx` | Criar documentos Word |
 | `openpyxl` | Criar planilhas Excel |
@@ -73,28 +73,28 @@ cp .env.example .env
 
 Escolha **UMA** das opções abaixo:
 
-#### Opção A: OpenAI (GPT-4 + DALL-E)
+#### Opçêo A: OpenAI (GPT-4 + DALL-E)
 
 1. Acesse: https://platform.openai.com/api-keys
 2. Faça login ou crie conta
 3. Clique em "Create new secret key"
 4. Copie a chave (começa com `sk-`)
 
-#### Opção B: OpenRouter (Acesso a várias LLMs)
+#### Opçêo B: OpenRouter (Acesso a várias LLMs)
 
 1. Acesse: https://openrouter.ai/keys
 2. Faça login com Google/GitHub
 3. Clique em "Create Key"
 4. Copie a chave (começa com `sk-or-`)
 
-#### Opção C: Together AI (Mais barato)
+#### Opçêo C: Together AI (Mais barato)
 
 1. Acesse: https://api.together.xyz/
 2. Crie conta
 3. Vá em Settings > API Keys
 4. Copie a chave
 
-#### Opção D: Replicate (Para imagens)
+#### Opçêo D: Replicate (Para imagens)
 
 1. Acesse: https://replicate.com/account/api-tokens
 2. Faça login com GitHub
@@ -127,7 +127,7 @@ REPLICATE_API_TOKEN=r8_sua-chave-aqui
 
 ## Passo 4: Testar
 
-### Testar geração de documento (sem LLM):
+### Testar geraçêo de documento (sem LLM):
 
 ```bash
 python scripts/generate_xlsx.py out/teste.xlsx
@@ -143,13 +143,13 @@ python scripts/exemplo_com_llm.py "teste simples" xlsx
 
 Se gerar o arquivo, a API está configurada corretamente.
 
-### Verificar configuração:
+### Verificar configuraçêo:
 
 ```bash
 python scripts/llm_config.py
 ```
 
-Mostra quais APIs estão configuradas.
+Mostra quais APIs estêo configuradas.
 
 ---
 
@@ -157,8 +157,8 @@ Mostra quais APIs estão configuradas.
 
 ```
 MSFilesA/
-├── .env                 ← Suas chaves de API (NÃO compartilhe!)
-├── .env.example         ← Modelo de configuração
+├── .env                 ← Suas chaves de API (NêO compartilhe!)
+├── .env.example         ← Modelo de configuraçêo
 ├── COMO_USAR.md         ← Como usar os scripts
 ├── INSTALACAO.md        ← Este arquivo
 ├── scripts/
@@ -176,13 +176,13 @@ MSFilesA/
 
 ## Problemas Comuns
 
-### "python não é reconhecido"
+### "python nêo é reconhecido"
 
-Python não está no PATH. Reinstale marcando "Add to PATH".
+Python nêo está no PATH. Reinstale marcando "Add to PATH".
 
 ### "No module named 'xxx'"
 
-Biblioteca não instalada. Execute:
+Biblioteca nêo instalada. Execute:
 ```bash
 pip install nome-da-biblioteca
 ```

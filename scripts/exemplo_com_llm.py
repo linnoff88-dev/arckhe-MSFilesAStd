@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Exemplo de uso dos scripts de geração de documentos com LLMs
+Exemplo de uso dos scripts de geraçêo de documentos com LLMs
 
 Este script mostra como usar GPT-4/Codex para gerar conteúdo
 e depois criar documentos automaticamente.
@@ -52,9 +52,9 @@ def gerar_relatorio_com_llm(tema, formato="docx"):
         {{
             "titulo": "Título do Relatório",
             "secoes": [
-                {{"titulo": "Introdução", "conteudo": "..."}},
+                {{"titulo": "Introduçêo", "conteudo": "..."}},
                 {{"titulo": "Análise", "conteudo": "..."}},
-                {{"titulo": "Conclusão", "conteudo": "..."}}
+                {{"titulo": "Conclusêo", "conteudo": "..."}}
             ]
         }}
 
@@ -140,11 +140,11 @@ def gerar_relatorio_com_llm(tema, formato="docx"):
 
     elif formato == "pptx":
         prompt = f"""
-        Crie uma apresentação sobre: {tema}
+        Crie uma apresentaçêo sobre: {tema}
 
         Retorne em formato JSON com esta estrutura:
         {{
-            "titulo": "Título da Apresentação",
+            "titulo": "Título da Apresentaçêo",
             "subtitulo": "Subtítulo",
             "slides": [
                 {{"titulo": "Slide 1", "bullets": ["ponto 1", "ponto 2"]}},
@@ -172,7 +172,7 @@ def gerar_relatorio_com_llm(tema, formato="docx"):
                 print("Erro ao parsear resposta da LLM")
                 return None
 
-        # Criar apresentação
+        # Criar apresentaçêo
         from generate_pptx import (nova_apresentacao, adicionar_slide_titulo,
                                    adicionar_slide_conteudo, salvar_apresentacao)
         from pptx.dml.color import RGBColor
@@ -189,7 +189,7 @@ def gerar_relatorio_com_llm(tema, formato="docx"):
         return caminho
 
     else:
-        print(f"Formato não suportado: {formato}")
+        print(f"Formato nêo suportado: {formato}")
         return None
 
 

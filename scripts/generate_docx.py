@@ -41,7 +41,7 @@ def criar_documento(caminho_saida="out/documento.docx"):
     p.add_run('.')
 
     # === SUBTÍTULO ===
-    doc.add_heading('Seção 1: Introdução', level=1)
+    doc.add_heading('Seçêo 1: Introduçêo', level=1)
     doc.add_paragraph(
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
         'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
@@ -62,7 +62,7 @@ def criar_documento(caminho_saida="out/documento.docx"):
 
     dados = [
         ['Nome', 'Idade', 'Cidade'],
-        ['Ana', '25', 'São Paulo'],
+        ['Ana', '25', 'Sêo Paulo'],
         ['Bruno', '30', 'Rio de Janeiro'],
         ['Carla', '28', 'Belo Horizonte'],
     ]
@@ -79,10 +79,10 @@ def criar_documento(caminho_saida="out/documento.docx"):
             if i == 0:
                 tabela.rows[i].cells[j].paragraphs[0].runs[0].bold = True
 
-    # === CITAÇÃO ===
-    doc.add_heading('Citação', level=2)
+    # === CITAÇêO ===
+    doc.add_heading('Citaçêo', level=2)
     citacao = doc.add_paragraph(
-        '"A imaginação é mais importante que o conhecimento." - Albert Einstein',
+        '"A imaginaçêo é mais importante que o conhecimento." - Albert Einstein',
         style='Quote'
     )
 
@@ -90,7 +90,7 @@ def criar_documento(caminho_saida="out/documento.docx"):
     doc.add_page_break()
 
     # === NOVA PÁGINA ===
-    doc.add_heading('Seção 2: Conclusão', level=1)
+    doc.add_heading('Seçêo 2: Conclusêo', level=1)
     doc.add_paragraph(
         'Este documento foi gerado automaticamente usando python-docx. '
         'Você pode modificar este script para criar documentos personalizados.'
@@ -102,7 +102,7 @@ def criar_documento(caminho_saida="out/documento.docx"):
     rodape.add_run('Documento gerado automaticamente').italic = True
     rodape.alignment = WD_ALIGN_PARAGRAPH.CENTER
 
-    # Criar diretório se não existir
+    # Criar diretório se nêo existir
     os.makedirs(os.path.dirname(caminho_saida) if os.path.dirname(caminho_saida) else '.', exist_ok=True)
 
     # Salvar
@@ -128,7 +128,7 @@ def criar_documento_personalizado(titulo, secoes, caminho_saida="out/documento.d
 
     # Seções
     for secao in secoes:
-        doc.add_heading(secao.get('titulo', 'Seção'), level=1)
+        doc.add_heading(secao.get('titulo', 'Seçêo'), level=1)
         doc.add_paragraph(secao.get('conteudo', ''))
 
     os.makedirs(os.path.dirname(caminho_saida) if os.path.dirname(caminho_saida) else '.', exist_ok=True)
